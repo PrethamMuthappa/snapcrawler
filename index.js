@@ -12,13 +12,13 @@ const path = require('path');
     output: process.stdout,
   });
   console.log("WELCOME TO SNAP CRAWLER , A SCRAPPER USED TO EXTRACT IMAGES FROM A WEBPAGE AND DOWNLOAD IT \n")
-  pageing.question('Enter the base URL part(THIS IS THE MAIN URL OF THE WEBSITE) : ', async (baseUrlInput) => {
-    pageing.question('Enter the URL of your page(ENTER THE URL OF THE WEB PAGE WHICH U WANT TO SCRAPE) : ', async (userInput) => {
+  pageing.question('Enter the base URL part(THIS IS THE MAIN URL OF THE WEBSITE) :  ', async (baseUrlInput) => {
+    pageing.question('Enter the URL of your page(ENTER THE URL OF THE WEB PAGE WHICH U WANT TO SCRAPE) \n : ', async (userInput) => {
       pageing.close();
 
       const browser = await puppeteer.launch({
         headless: false,
-        executablePath: 'C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe',
+        executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
         ignoreDefaultArgs: ['--disable-extensions'],
       });
 
@@ -36,9 +36,6 @@ const path = require('path');
         console.log(evawl);
       }
 
-    
-
-      
       const downloadsFolderPath = path.join('C:', 'Users', process.env.USERNAME, 'Downloads'); // Change this to the appropriate path if needed
 
       const folderName = 'ImageScraperDownloads';
@@ -59,7 +56,7 @@ const path = require('path');
           const imageName = imageUrl.split('/').pop();
           const imagePath = path.join(folderpath, imageName);
           await fs.writeFile(imagePath, imageBuffer);
-          console.log(`Downloaded: ${imageUrl}`);
+          console.log(`\n Downloaded: ${imageUrl}`);
         } catch (err) {
           console.error(`Error downloading ${imageUrl}: ${err.message}`);
         }
@@ -68,8 +65,8 @@ const path = require('path');
        await browser.close();
       const endTime = performance.now();
       const executionTime = endTime - startTime;
-      Math.floor(executionTime);
-      console.log(`Execution time: ${executionTime} milliseconds`);
+      times=Math.floor(executionTime);
+      console.log(`\n Execution time: ${times} milliseconds \n`);
       console.log("IMAGES HAVE BEEN DOWNLOADED IN THE DOWNLOADS FOLDER C:DRIVE ")
     });
   });

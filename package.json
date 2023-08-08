@@ -1,6 +1,6 @@
 {
   "name": "snapcrawler",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "test script for web scrapping",
   "main": "index.js",
   "scripts": {
