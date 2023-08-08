@@ -20,5 +20,8 @@ This tool is built using nodejs and puppeteer<br>
 
 <h6>To update the package</h6>
 <li>npm update snapcrawler</li>
+<br>
 
-<b><h4>Note:- the saved images can be found in the c drive downloads folder and inside that a folder will be automatically be created and images will be stored  </b>
+<b>Test case: Images stored inside html img tag works , but images stored inside external servers such as CDN or aws S3 can be retrived</b>
+
+<b><h4>Note:- The saved images can be found in the c drive downloads folder and inside that a folder will be automatically be created and images will be stored  </b>
