@@ -7,7 +7,7 @@ This tool was built using nodejs and puppeteer<br>
 <h4> Instructions for running: </h4>
 
 <ul>
-
+ 
   <li><b>npm install snapcrawler</b></li>
   <li><b>npx snapcrawler</b> </li>
 
